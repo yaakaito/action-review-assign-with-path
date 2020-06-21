@@ -19,7 +19,7 @@ jobs:
         env:
           REVIEWERS: ${{ steps.request.outputs.reviewers }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          URL: ${{ github.context.payload.pull_request.html_url }}
+          URL: ${{ github.event.pull_request.html_url }}
         run: |
           curl \
             -X POST\
