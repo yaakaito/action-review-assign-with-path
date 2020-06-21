@@ -9358,7 +9358,6 @@ module.exports = function httpAdapter(config) {
 const core = __webpack_require__(470)
 const github = __webpack_require__(469)
 const action = __webpack_require__(928)
-const { context } = __webpack_require__(521)
 
 const run = async () => {
     try {
@@ -9373,8 +9372,8 @@ const run = async () => {
                 repo: process.env.GITHUB_REPOSITORY,
                 pull_number: pull_request.number
             },
-            teamReviewers: core.getInput('teamReviewers') || undefined,
-            reviewers: core.getInput('reviewers') || undefined,
+            teamReviewers: core.getInput('teamReviewers') ? core.getInput('teamReviewers').split(',') : undefined,
+            reviewers: core.getInput('reviewers') ? core.getInput('reviewers').split(',') : undefined,
             token: core.getInput('githubToken')
         }
         console.log(options)
