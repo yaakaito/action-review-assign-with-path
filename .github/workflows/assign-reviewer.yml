@@ -28,7 +28,7 @@ jobs:
                 {\
                   \"channel\": \"#dev_null\", \
                   \"username\": \"Pull daNpa\",\
-                  \"text\": \"${URL} ${REVIEWERS}\",\
+                  \"text\": \":bulb: Review requsted ${REVIEWERS}, ${URL}\",\
                   \"icon_emoji\": \":pull_danpa:\"\
                 }"\
             ${SLACK_WEBHOOK}
