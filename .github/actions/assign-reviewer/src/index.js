@@ -15,8 +15,8 @@ const run = async () => {
                 repo: process.env.GITHUB_REPOSITORY,
                 pull_number: pull_request.number
             },
-            teamReviewers: core.getInput('teamReviewers') || undefined,
-            reviewers: core.getInput('reviewers') || undefined,
+            teamReviewers: core.getInput('teamReviewers') ? core.getInput('teamReviewers').split(',') : undefined,
+            reviewers: core.getInput('reviewers') ? core.getInput('reviewers').split(',') : undefined,
             token: core.getInput('githubToken')
         }
         console.log(options)
