@@ -33,16 +33,16 @@ jobs:
                   \"attachments\": [{\
                     \"color\": \"#11BEAE\",\
                     \"blocks\": [{\
-                      "type": "section",
-                      "text": {\
-                        "type": "mrkdwn",\
-                        "text": "<${URL}|${TITLE>"\
+                      \"type\": \"section\",
+                      \"text\": {\
+                        \"type\": \"mrkdwn\",\
+                        \"text\": \"<${URL}|${TITLE>\"\
                       }\
                     },{\
-                      "type": "section",
-                      "text": {\
-                        "type": "mrkdwn",\
-                        "text": "requested a review from *${REVIEWERS}*"\
+                      \"type\": \"section\",
+                      \"text\": {\
+                        \"type\": \"mrkdwn\",\
+                        \"text\": \"requested a review from *${REVIEWERS}*\"\
                       }\
                     }]\
                   }]\
