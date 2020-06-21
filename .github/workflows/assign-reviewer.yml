@@ -31,7 +31,7 @@ jobs:
                   \"text\": \"${URL} ${REVIEWERS}\",\
                   \"icon_emoji\": \":pull_danpa:\"\
                   \"attachments\": [{\
-                    \"color\": \"#11BEAE\",\
+                    \"color\": \"\#11BEAE\",\
                     \"blocks\": [{\
                       \"type\": \"section\",
                       \"text\": {\
