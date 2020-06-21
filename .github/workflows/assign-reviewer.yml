@@ -1,0 +1,19 @@
+name: Assign frontend reviewer
+
+on:
+  pull_request:
+    paths:
+      - "frontend/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump
+        env:
+          CONTEXT: ${{ toJson(github) }}
+        run: echo $CONTEXT
+      - name: Dump2
+        env:
+          CONTEXT: ${{ toJson(github) }}
+        run: echo "${CONTEXT}""
