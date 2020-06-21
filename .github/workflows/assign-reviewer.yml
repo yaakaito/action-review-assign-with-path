@@ -30,14 +30,5 @@ jobs:
                   \"username\": \"Pull daNpa\",\
                   \"text\": \"${URL} ${REVIEWERS}\",\
                   \"icon_emoji\": \":pull_danpa:\"\
-                  \"blocks\": [\
-                    {\
-                      \"type\": \"section\",\
-                      \"text\": {\
-                        \"type\": \"mrkdwn\",\
-                        \"text\": \"Danny Torrence left the following review for your property:\"\
-                      }\
-                    }\
-                  ]\
                 }"\
             ${SLACK_WEBHOOK}
