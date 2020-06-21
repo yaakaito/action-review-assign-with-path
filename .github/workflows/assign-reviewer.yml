@@ -36,7 +36,13 @@ jobs:
                       "type": "section",
                       "text": {\
                         "type": "mrkdwn",\
-                        "text": "<${URL}|${TITLE> requested a review from *${REVIEWERS}*"\
+                        "text": "<${URL}|${TITLE>"\
+                      }\
+                    },{\
+                      "type": "section",
+                      "text": {\
+                        "type": "mrkdwn",\
+                        "text": "requested a review from *${REVIEWERS}*"\
                       }\
                     }]\
                   }]\
