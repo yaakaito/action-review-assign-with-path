@@ -30,9 +30,5 @@ jobs:
                   \"username\": \"Pull daNpa\",\
                   \"text\": \"${URL} ${REVIEWERS}\",\
                   \"icon_emoji\": \":pull_danpa:\"\
-                  \"attachments\": [{\
-                    \"color\": \"\#11BEAE\",\
-
-                  }]\
                 }"\
             ${SLACK_WEBHOOK}
