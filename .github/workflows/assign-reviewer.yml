@@ -23,5 +23,5 @@ jobs:
         run: |
           curl \
             -X POST\
-            --data-urlencode "payload={\"channel\": \"#dev_null\", \"username\": \"webhookbot\", \"text\": \"This is posted to #dev_null and comes from a bot named webhookbot.\", \"icon_emoji\": \":ghost:\"}"\
+            --data-urlencode "payload={\"channel\": \"#dev_null\", \"username\": \"webhookbot\", \"text\": \"${URL} ${REVIEWERS}\", \"icon_emoji\": \":ghost:\"}"\
             ${SLACK_WEBHOOK}
