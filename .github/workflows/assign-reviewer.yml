@@ -17,5 +17,5 @@ jobs:
         run: echo $CONTEXT
       - uses: ./.github/actions/assign-reviewer
         with:
-          team: 'team_frontend'
+          reviewers: ['gomazoa']
           githubToken: ${{ secrets.GITHUB_TOKEN }}
