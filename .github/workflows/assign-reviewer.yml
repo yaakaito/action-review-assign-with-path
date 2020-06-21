@@ -18,3 +18,7 @@ jobs:
         env:
           CONTEXT: ${{ toJson(github) }}
         run: echo "${CONTEXT}""
+      - use: .github/actions/assign-reviewer
+        with:
+          team: 'team_frontend'
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
