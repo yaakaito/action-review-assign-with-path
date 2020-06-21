@@ -32,19 +32,7 @@ jobs:
                   \"icon_emoji\": \":pull_danpa:\"\
                   \"attachments\": [{\
                     \"color\": \"\#11BEAE\",\
-                    \"blocks\": [{\
-                      \"type\": \"section\",\
-                      \"text\": {\
-                        \"type\": \"mrkdwn\",\
-                        \"text\": \"<${URL}|${TITLE>\"\
-                      }\
-                    },{\
-                      \"type\": \"section\",\
-                      \"text\": {\
-                        \"type\": \"mrkdwn\",\
-                        \"text\": \"requested a review from *${REVIEWERS}*\"\
-                      }\
-                    }]\
+
                   }]\
                 }"\
             ${SLACK_WEBHOOK}
