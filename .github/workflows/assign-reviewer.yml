@@ -11,6 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: yaakaito/action-request-review@master
+        id: request
         with:
           reviewers: gomazoa
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - if: "contains(steps.request.outputs.reviewers, '@')"
+        env:
+          REVIEWERS: ${{ steps.request.outputs.reviewers }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          URL: ${{ github.context.payload.pull_request.html_url }}
+        run: |
+          curl \
+            -X POST\
+            --data-urlencode "payload={\"channel\": \"#dev_null\", \"username\": \"webhookbot\", \"text\": \"This is posted to #dev_null and comes from a bot named webhookbot.\", \"icon_emoji\": \":ghost:\"}"\
+            ${SLACK_WEBHOOK}
