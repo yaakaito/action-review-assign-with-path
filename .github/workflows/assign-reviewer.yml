@@ -3,9 +3,6 @@ name: Assign frontend reviewer
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-    branches:
-      - "**"
-      - "!develop"
     paths:
       - "frontend/**"
 
@@ -18,6 +15,7 @@ jobs:
         with:
           reviewers: gomazoa
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          ignore: "+(develop|master)"
       - if: "contains(steps.request.outputs.reviewers, '@')"
         env:
           REVIEWERS: ${{ steps.request.outputs.reviewers }}
