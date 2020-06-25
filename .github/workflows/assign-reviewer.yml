@@ -15,6 +15,7 @@ jobs:
         with:
           reviewers: gomazoa
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          ignore: "+(develop|master)"
       - if: "contains(steps.request.outputs.reviewers, '@')"
         env:
           REVIEWERS: ${{ steps.request.outputs.reviewers }}
