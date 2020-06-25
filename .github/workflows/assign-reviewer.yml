@@ -3,6 +3,9 @@ name: Assign frontend reviewer
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+    branches: 
+      - "**"
+      - "!develop"
 
 jobs:
   build:
