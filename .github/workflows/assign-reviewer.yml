@@ -3,10 +3,10 @@ name: Assign frontend reviewer
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+    branches-ignore:
+      - 'develop'
     paths:
       - "frontend/**"
-    branches-ignore:
-      - develop
 
 jobs:
   build:
